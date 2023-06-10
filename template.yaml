@@ -117,7 +117,7 @@ Resources:
         Create:
           Type: Api
           Properties:
-            Path: /todos/language/{language}
+            Path: /language/todos/{language}
             Method: get
 
 
@@ -145,5 +145,5 @@ Outputs:
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/todos/{id}"
   ListTodosLanguageApi:
     Description: "API Gateway endpoint URL for ${opt:stage} stage for List TODO with translate"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/todos/language/{id}"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/language/todos/{id}"
 
