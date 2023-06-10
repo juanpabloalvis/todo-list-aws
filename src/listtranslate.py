@@ -3,9 +3,9 @@ import decimalencoder
 import todoList
 import boto3
 
+
 def listtranslate(event, context):
     translate = boto3.client(service_name='translate', region_name='us-east-1', use_ssl=True)
-
     # Obtener los parámetros del evento
     target_language = todoList.get_item(event['pathParameters']['language'])
     items = todoList.get_items()
