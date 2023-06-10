@@ -106,7 +106,7 @@ Resources:
       ProvisionedThroughput: 
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
-  ListTodosFunctionLanguage:
+  ListTodosLanguageFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: src/
@@ -143,7 +143,7 @@ Outputs:
   DeleteTodoApi:
     Description: "API Gateway endpoint URL for ${opt:stage} stage for Delete TODO"
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/todos/{id}"
-  ListTodosTranslateApi:
+  ListTodosLanguageApi:
     Description: "API Gateway endpoint URL for ${opt:stage} stage for List TODO with translate"
     Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/todos//{id}"
 
