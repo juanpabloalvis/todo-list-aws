@@ -13,7 +13,9 @@ def listtranslate(event, context):
     items = todoList.get_items()
     for item in items:
         text = item['text']
-        item['text'] = translate.translate_text(Text=text, SourceLanguageCode="en", TargetLanguageCode=target_language)
+        item['text'] = translate.translate_text(Text=text,
+                                                SourceLanguageCode="en",
+                                                TargetLanguageCode=target_language)
 
     # create a response
     response = {
