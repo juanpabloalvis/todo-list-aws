@@ -13,7 +13,7 @@ def list(event, context):
     print(type(target_language))
     print(target_language)
     items = todoList.get_items()
-    print('******'+type(items))
+    print(type(items))
     for item in items:
         text = item['text']
         item['text'] = translate \
