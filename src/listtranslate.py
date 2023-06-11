@@ -14,6 +14,9 @@ def list(event, context):
     print(target_language)
     items = todoList.get_items()
     print(type(items))
+
+    [print(i) for i in items]
+    print(items)
     for item in items:
         text = item['text']
         item['text'] = translate \
