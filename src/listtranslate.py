@@ -10,6 +10,7 @@ def list(event, context):
                              use_ssl=True)
     # Obtener los parámetros del evento
     target_language = event['pathParameters']['language']
+    print(target_language)
     items = todoList.get_items()
     for item in items:
         text = item['text']
