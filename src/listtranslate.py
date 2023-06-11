@@ -9,7 +9,7 @@ def list(event, context):
                              region_name='us-east-1',
                              use_ssl=True)
     # Obtener los parámetros del evento
-    target_language = todoList.get_item(event['pathParameters']['language'])
+    target_language = event['pathParameters']['language']
     items = todoList.get_items()
     for item in items:
         text = item['text']
